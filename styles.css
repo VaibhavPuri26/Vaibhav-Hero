@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.main{
+    background-color: #212121;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    overflow: hidden;
+}
+header{
+    background-color: #212121;
+    color: white;
+    height: 70px;
+}
+
+.svg-text {
+    width: 81%;
+    pointer-events: none;
+    z-index: 1;
+    z-index: 10;
+}
+  
+.text {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2rem;
+    stroke-width: 1rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    fill: white;
+    text-anchor: middle;
+    stroke: #2a2a2a; /* Updated to match the darker outline color */
+    z-index: 1;
+}
+
+#hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.pop-up-image{
+    opacity: 0;
+    transform: scale(0);
+    animation: popUp 1s forwards ease-in-out;
+}
+
+.img1 { top: 110px; left: 100px; animation-delay: 0s; }
+.img2 { top: 110px; left: 1100px; animation-delay: 1s; }
+.img3 { top: 490px; left: 100px; animation-delay: 1.5s; }
+.img4 { top: 490px; left: 1150px; animation-delay: 0.5s; }
+
+@keyframes popUp {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.container, .container1, .container2, .container3 {
+    width: 300px;
+    height: 200px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    z-index: 1;
+}
+
+.container:hover, .container1:hover, .container2:hover, .container3:hover {
+    z-index: 15; /* Higher z-index on container hover */
+}
+
+.container { top: 110px; left: 150px; animation-delay: 0s; }
+.container1 { top: 110px; left: 1100px; animation-delay: 1s; }
+.container2 { top: 480px; left: 100px; animation-delay: 1.5s; }
+.container3 { top: 480px; left: 1150px; animation-delay: 0.5s; }
+
+.image-holder {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2; /* Default z-index */
+    transition: all 0.3s ease;
+    cursor: pointer;
+    object-fit: cover;
+    background-color: transparent;
+}
+
+.image.active {
+    z-index: 20; /* Higher than big-text when active */
+}
+
+.class-text{
+    position: relative;
+    z-index: 1;
+}
+
+#movableImage{
+    z-index: 0;
+}
+
+.big-text {
+    font-family: Area Normal, Helvetica, Arial, sans-serif;
+    font-weight: 800;
+    font-size: larger;
+    z-index: 1;
+    transition: all 0.3s ease;
+    fill: white;
+    stroke: transparent;
+    stroke-width: 1px;
+
+}
+#navbar {
+    display: flex;
+    align-items: center;
+}
+
+#navbar img{
+    margin-left: 30px;
+    cursor: pointer;
+}
+
+#navbar div{
+    margin-left: 50rem;
+}
+
+.nav-content{
+    width: 40rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.nav-content span{
+    font-family: Area Normal, Helvetica, Arial, sans-serif;
+    font-size: larger;
+    cursor: pointer;
+}
