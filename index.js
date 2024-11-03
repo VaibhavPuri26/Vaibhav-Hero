@@ -3,10 +3,10 @@ const container = document.querySelector('.container');
 const container1 = document.querySelector('.container1');
 const container2 = document.querySelector('.container2');
 const container3 = document.querySelector('.container3');
-const image = document.getElementById('movableImage');
-const image1 = document.getElementById('movableImage1');
-const image2 = document.getElementById('movableImage2');
-const image3 = document.getElementById('movableImage3');
+const image = document.querySelector('#movableImage');
+const image1 = document.querySelector('#movableImage1');
+const image2 = document.querySelector('#movableImage2');
+const image3 = document.querySelector('#movableImage3');
 const maxRadius = 200;
 
 // Function to calculate center position
@@ -27,7 +27,7 @@ function handleMouseMove(event, activeContainer, activeImage) {
             // Style for inactive containers
             cont.style.border = "2px solid rgba(255, 255, 255, 0.3)";
             cont.style.backgroundColor = "transparent";
-            cont.style.zIndex = "1"; // Reset z-index
+            cont.style.zIndex = "1";
            
             // Style for inactive images
             images[index].style.opacity = "0";
@@ -37,26 +37,26 @@ function handleMouseMove(event, activeContainer, activeImage) {
             // Style for active container
             cont.style.border = "none";
             cont.style.backgroundColor = "transparent";
-            cont.style.zIndex = "15"; // Increase container z-index
+            cont.style.zIndex = "15";
            
             // Style for active image
             images[index].style.opacity = "1";
             images[index].classList.add('active');
-            images[index].style.zIndex = "20"; // Ensure image is above text
+            images[index].style.zIndex = "20";
         }
        
         // Ensure containers are visible
         cont.style.opacity = "1";
     });
 
-    // Update text style for vector effect - only show stroke when hovering
+    // Update text style for vector effect
     const bigTexts = document.getElementsByClassName('big-text');
     for (let i = 0; i < bigTexts.length; i++) {
         let bigText = bigTexts[i];
         bigText.style.fill = "transparent";
         bigText.style.stroke = "#2a2a2a";
         bigText.style.strokeWidth = "1px";
-        bigText.style.zIndex = "1"; // Ensure text stays below
+        bigText.style.zIndex = "1";
     }
 
     // Calculate mouse position
@@ -85,23 +85,23 @@ function resetImages() {
         cont.style.transition = 'all 0.5s ease';
         cont.style.border = "none";
         cont.style.backgroundColor = "transparent";
-        cont.style.zIndex = "1"; // Reset container z-index
+        cont.style.zIndex = "1";
        
         images[index].style.transition = 'all 0.5s ease';
         images[index].style.transform = 'translate(0, 0)';
         images[index].style.opacity = "1";
         images[index].classList.remove('active');
-        images[index].style.zIndex = "2"; // Reset image z-index
+        images[index].style.zIndex = "2";
     });
 
-    // Reset text style - remove stroke when not hovering
+    // Reset text style
     const bigTexts = document.getElementsByClassName('big-text');
     for (let i = 0; i < bigTexts.length; i++) {
         let bigText = bigTexts[i];
         bigText.style.fill = "white";
         bigText.style.stroke = "transparent";
         bigText.style.strokeWidth = "1px";
-        bigText.style.zIndex = "1"; // Reset text z-index
+        bigText.style.zIndex = "1";
     }
 }
 
