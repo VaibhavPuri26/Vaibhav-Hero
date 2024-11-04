@@ -31,50 +31,70 @@
       <div id="hero">
         <svg class="svg-text" viewBox="0 0 400 200">
         <defs>
-          <!-- Mask with animated rectangle for smooth fill from bottom to top -->
+         
           <mask id="text-mask">
             <rect x="0" y="100%" width="100%" height="100%" fill="white">
-              <!-- Animate the rectangle from bottom to top -->
+              
               <animate attributeName="y" from="100%" to="0" begin="0.2s" dur="0.8s" fill="freeze" />
             </rect>
           </mask>
         </defs>
     
-        <!-- Text with each word on a new line using <tspan> -->
+       
         <text x="50%" y="20%" class="text" mask="url(#text-mask)">
           <tspan x="50%" dy="0.1em" class="big-text">IMAGINING</tspan>
           <tspan x="50%" dy="1.2em" class="big-text">UNIQUE</tspan>
           <tspan x="50%" dy="1.2em" class="big-text">CONCEPTS</tspan>
           <tspan x="50%" dy="1.2em" class="big-text">AND DIGITAL</tspan>
-          <!-- <tspan x="50%" dy="1.2em">DIGITAL</tspan> -->
+         
           <tspan x="50%" dy="1.2em" class="big-text">EXPERIENCES</tspan>
         </text>
       </svg>
       </div>
-      <div class="container pop-up-image">
-        <a href="https://www.pha5e.com/en/projects/bigger-science" target="_blank" rel="noopener noreferrer">
-            <img src="https://2022-pha5e-website-prod.s3.eu-west-3.amazonaws.com/assets/bigger-science_thumbnail-2.png " alt="Pop-up Image" class="image" id="movableImage">
-        </a>
-    </div>
-    <div class="container1 pop-up-image">
-        <a href="https://www.pha5e.com/en/projects/10ans-mucem" target="_blank" rel="noopener noreferrer">
-            <img src="https://2022-pha5e-website-prod.s3.eu-west-3.amazonaws.com/assets/map-interactive.png" alt="Pop-up Image" class="image" id="movableImage1">
-        </a>
-    </div>
-    <div class="container2 pop-up-image">
-        <a href="https://www.pha5e.com/en/projects/unganisha" target="_blank" rel="noopener noreferrer">
-            <img src="https://2022-pha5e-website-prod.s3.eu-west-3.amazonaws.com/assets/Capture%20daÌeIÌcran%202024-01-04%20aIÌ%2016.41.06-2.png" alt="Pop-up Image" class="image" id="movableImage2">
-        </a>
-    </div>
-    <div class="container3 pop-up-image">
-        <a href="https://www.pha5e.com/fr/projects/olivier" target="_blank" rel="noopener noreferrer">
-            <img src="https://2022-pha5e-website-prod.s3.eu-west-3.amazonaws.com/assets/Capture-dâeÌcran-2023-04-03-aÌ-10.59.43_2-2.jpg" alt="Pop-up Image" class="image" id="movableImage3">
-        </a>
-    </div>
+     
 
-      <!-- <div class="container">
-        <img src="https://2022-pha5e-website-prod.s3.eu-west-3.amazonaws.com/assets/bigger-science_thumbnail-2.png" alt="Movable Image" class="image" id="movableImage">
-      </div> pop-up-image img1 pop-up-image img2-->
+<div class="container pop-up-image">
+  <a href="https://www.pha5e.com/en/projects/bigger-science" target="_blank" rel="noopener noreferrer">
+      <img src="https://2022-pha5e-website-prod.s3.eu-west-3.amazonaws.com/assets/bigger-science_thumbnail-2.png" alt="Pop-up Image" class="image" id="movableImage">
+      <div class="image-text">
+          <h2>BIGGER SCIENCE</h2>
+          <p>Immersive Experience / WebGL / Gaming</p>
+      </div>
+  </a>
+</div>
+
+<div class="container1 pop-up-image">
+  <a href="https://www.pha5e.com/en/projects/10ans-mucem" target="_blank" rel="noopener noreferrer">
+      <img src="https://2022-pha5e-website-prod.s3.eu-west-3.amazonaws.com/assets/map-interactive.png" alt="Pop-up Image" class="image" id="movableImage1">
+      <div class="image-text">
+          <h2> MUCEM</h2>
+          <p>Experiential Website</p>
+      </div>
+  </a>
+</div>
+
+<div class="container2 pop-up-image">
+  <a href="https://www.pha5e.com/en/projects/unganisha" target="_blank" rel="noopener noreferrer">
+      <img src="https://2022-pha5e-website-prod.s3.eu-west-3.amazonaws.com/assets/Capture%20daÌeIÌcran%202024-01-04%20aIÌ%2016.41.06-2.png" alt="Pop-up Image" class="image" id="movableImage2">
+      <div class="image-text">
+          <h2>UNGANISHA</h2>
+          <p>Experiential Website/ WebGL / 3D</p>
+      </div>
+  </a>
+</div>
+
+<div class="container3 pop-up-image">
+  <a href="https://www.pha5e.com/fr/projects/olivier" target="_blank" rel="noopener noreferrer">
+      <img src="https://2022-pha5e-website-prod.s3.eu-west-3.amazonaws.com/assets/Capture-dâeÌcran-2023-04-03-aÌ-10.59.43_2-2.jpg" alt="Pop-up Image" class="image" id="movableImage3">
+      <div class="image-text">
+          <h2>Olive Tree
+           </h2>
+          <p> Interactive Installation / Real Time</p>
+      </div>
+  </a>
+</div>
+
+
     </div>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="index.js"></script>
